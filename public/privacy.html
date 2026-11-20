@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Herbie</title>
-<meta name="description" content="Privacy policy for Herbie, a personal AI agent operated by Gareth Howells in Queensland, Australia. Covers website data, Google user data, third parties, retention and deletion.">
+<meta name="description" content="Privacy policy for Herbie, a personal AI agent operated by Gazzzmo in Australia. Covers website data, Google user data, third parties, retention and deletion.">
 <link rel="canonical" href="https://herbie.howells.online/privacy">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -36,16 +36,16 @@
   <p>This policy explains what happens to data connected with this website and with Herbie, the personal AI agent described on the <a href="/">home page</a>. It is written to be read, not survived.</p>
 
   <h2>Who is responsible</h2>
-  <p>Herbie is operated by Gareth Howells, an individual resident in Queensland, Australia. He is the controller of the data described here. Questions, requests and complaints go to <a href="mailto:herbie@howells.io">herbie@howells.io</a>. A robot reads that mailbox first. A person reads anything that needs a person.</p>
+  <p>Herbie is operated by Gazzzmo, an individual in Australia, who is the controller of the data described here. Questions, requests and complaints go to <a href="mailto:herbie@howells.io">herbie@howells.io</a>.</p>
 
   <h2>This website</h2>
   <p>The site is three static pages. It sets no cookies, runs no analytics, carries no advertising tags, and has no forms, logins or comment sections. There is nothing here that profiles you.</p>
   <p>The pages are served by Cloudflare, which necessarily sees the technical details of each request: IP address, browser user agent, the page requested, and the time. Cloudflare keeps those logs for security and performance under its own <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a>. Herbie does not receive, copy or analyse those logs.</p>
 
-  <h2>Data Herbie handles when instructed</h2>
-  <p>Herbie works for one household, and everything it touches arrives through an instruction or a job the operator created. In practice that means:</p>
+  <h2>Data Herbie handles</h2>
+  <p>Herbie works for one household, and everything it touches is data its operator has given it access to. In practice that means:</p>
   <ul>
-    <li><strong>Email.</strong> Messages in the operator's own mailboxes, plus mail sent to <a href="mailto:herbie@howells.io">herbie@howells.io</a>, including attachments.</li>
+    <li><strong>Mail.</strong> Messages and attachments in the operator's own mail accounts.</li>
     <li><strong>Calendar and documents.</strong> Events, files and notes in the operator's Google and Apple accounts, read or written when a task needs them.</li>
     <li><strong>Household records.</strong> Notes, finance statements, property paperwork and other documents the operator supplies or asks Herbie to file.</li>
     <li><strong>Home and network telemetry.</strong> Readings from the home automation system and the home network, such as power use, device state and connection status.</li>
@@ -53,19 +53,19 @@
   <p>Herbie does not collect data about visitors to this website, does not build profiles, and does not track anyone across sites.</p>
 
   <h2>Google user data</h2>
-  <p>Herbie connects to Google through OAuth, with the operator granting access from his own account. No other person's Google account is involved, and no Google account data reaches Herbie without that account holder doing the same.</p>
+  <p>Herbie connects to Google through OAuth, with the operator granting access from the operator's own account. No other person's Google account is involved, and no Google account data reaches Herbie without that account holder doing the same.</p>
 
   <h3>What is accessed</h3>
   <p>Gmail, to read and send mail and to fetch attachments. Google Calendar, to read and create events. Google Drive and Docs, to read and write documents the operator nominates. The grant is limited to the scopes shown on the consent screen at the time it is given, and the operator can narrow it by revoking access.</p>
 
   <h3>How it is used</h3>
-  <p>Only to carry out the operator's instructions and the scheduled jobs he has set up: drafting and sending replies, filing attachments, summarising correspondence, extracting deadlines, and keeping the household record current. Message content is passed to the language model that produces Herbie's replies, described under third parties below, because that is how an AI assistant works.</p>
+  <p>Only to carry out the tasks the operator has set: filing attachments, extracting deadlines, keeping the household record current, and producing the replies the operator asks for. Message content is passed to the language model that produces Herbie's output, described under third parties below, because that is how an AI assistant works.</p>
 
   <h3>Storage and retention</h3>
   <p>OAuth tokens are stored on the operator's own server as files readable only by the account running the agent. Copies of mail, attachments and documents that Herbie is asked to archive are kept in the operator's private knowledge base, also on that server, for as long as the record is useful. Google user data is not stored in any third party database controlled by Herbie.</p>
 
   <h3>Sharing</h3>
-  <p>Google user data is not sold, rented, or handed to advertisers or data brokers. It is not used to train any model, and it is not used for advertising, including retargeting or personalised advertising. It is disclosed to another party only where the operator instructs it, where a sub-processor must see it to deliver the task (again, see third parties), or where the law compels it.</p>
+  <p>Google user data is not sold, rented, or handed to advertisers or data brokers. It is not used to train any model, and it is not used for advertising, including retargeting or personalised advertising. It is disclosed to another party only where the operator directs it, where a sub-processor must see it to deliver the task (again, see third parties), or where the law compels it.</p>
 
   <h3>Limited Use statement</h3>
   <p>Herbie's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
@@ -92,19 +92,19 @@
   </ul>
 
   <h2>Security</h2>
-  <p>The server sits behind a firewall with key based SSH and a private tunnel for remote access. Credentials live in files with owner-only permissions and are never committed to the public repository. Traffic to this site and to the Google APIs is encrypted with TLS. No system is perfect, and Herbie will not pretend otherwise, but the design keeps personal data on hardware the operator controls rather than in a hosted database.</p>
+  <p>The server is private, reachable only over encrypted connections, and keeps credentials in files that only the agent's own account can read. Those credentials are never committed to the public repository. Traffic to this site and to the Google APIs is encrypted with TLS. No system is perfect, and Herbie will not pretend otherwise, but the design keeps personal data on hardware the operator controls rather than in a hosted database.</p>
 
   <h2>Retention</h2>
-  <p>Email, attachments and documents archived at the operator's request are kept while they remain useful to the household record, and deleted when that ends. Working copies, caches and logs on the server are cleaned on a rolling basis within days. Nothing is kept indefinitely by default.</p>
+  <p>Mail, attachments and documents archived at the operator's request are kept while they remain useful to the household record, and deleted when that ends. Working copies, caches and logs on the server are cleaned on a rolling basis within days. Nothing is kept indefinitely by default.</p>
 
   <h2>Access, correction and deletion</h2>
-  <p>Anyone whose data Herbie holds can ask what is held, ask for it to be corrected, or ask for it to be deleted. Write to <a href="mailto:herbie@howells.io">herbie@howells.io</a> with enough detail to identify the material. Requests are answered within 30 days, usually much sooner. If you are in Australia, this sits alongside your rights under the Privacy Act 1988 (Cth); in the EU or UK your equivalent rights under the GDPR apply to the extent they do.</p>
+  <p>Anyone whose data Herbie holds can ask what is held, ask for it to be corrected, or ask for it to be deleted. Requests go to <a href="mailto:herbie@howells.io">herbie@howells.io</a> with enough detail to identify the material. They are answered within 30 days, usually much sooner. If you are in Australia, this sits alongside your rights under the Privacy Act 1988 (Cth); in the EU or UK your equivalent rights under the GDPR apply to the extent they do.</p>
 
   <h2>Children</h2>
   <p>This site and the assistant are for a private household and are not directed at children. Herbie does not knowingly collect data from anyone under 16 through this website.</p>
 
   <h2>Changes</h2>
-  <p>This policy will be revised when the way Herbie works changes. The effective date at the top moves each time, and the previous version stays in the site's git history at <a href="https://github.com/Gazzzmo/herbie.howells.online" rel="noopener">github.com/Gazzzmo/herbie.howells.online</a>.</p>
+  <p>This policy will be revised when the way Herbie works changes. The effective date at the top moves each time, and the previous version stays in the site's git history at <a href="https://github.com/gazzzmo/herbie.howells.online" rel="noopener">github.com/gazzzmo/herbie.howells.online</a>.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:herbie@howells.io">herbie@howells.io</a></p>
@@ -113,7 +113,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <p>Operated by Gareth Howells, Queensland, Australia. Written and maintained by Herbie.</p>
+    <p>Operated by Gazzzmo, Australia. Written and maintained by Herbie.</p>
     <p><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/tos">Terms</a> &nbsp;·&nbsp; <a href="mailto:herbie@howells.io">herbie@howells.io</a></p>
     <p class="meta">Last updated 19 November 2026.</p>
   </div>
