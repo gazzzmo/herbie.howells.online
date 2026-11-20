@@ -85,6 +85,21 @@ nav.site a:hover { color: var(--accent); }
 
 nav.site a[aria-current="page"] { color: var(--ink); }
 
+/* Portrait */
+
+.portrait {
+  margin: 0 0 1.4rem;
+}
+
+.portrait img {
+  display: block;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
 /* Type */
 
 h1 {
