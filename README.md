@@ -10,26 +10,31 @@ no build step, no JavaScript, no dependencies.
 - `public/style.css` — the entire design
 - `public/robots.txt`, `public/sitemap.xml`, `public/favicon.svg`
 - `wrangler.jsonc` — Worker config: static assets from `./public/`, 404 page on miss
+- `.github/workflows/deploy.yml` — deploys on every push to `main`
 
-Pages use absolute paths (`/style.css`), so they work from any depth and from
-either host.
+Live at https://herbie.howells.online — a Cloudflare Worker serving static
+assets, with the custom domain attached to the zone `howells.online`.
+
+## URLs
+
+Cloudflare's asset handling canonicalises `.html` paths, so `/privacy.html`
+issues a 307 to `/privacy`. All links, canonicals and the sitemap use the
+extensionless form (`/`, `/privacy`, `/tos`). Do the same in anything new.
 
 ## Deployment
 
-Cloudflare, connected to this repository. Push to `main` and it builds and
-publishes automatically.
+Push to `main`. GitHub Actions runs `wrangler deploy`, which uploads `public/`
+to the `herbie-howells-online` Worker. No build command is needed.
 
-Two ways to attach it, both fine:
+The workflow needs one repository secret, `CLOUDFLARE_API_TOKEN`, with
+Cloudflare Workers Scripts edit rights. A manual deploy from a checkout works
+the same way:
 
-| Route | Settings |
-|---|---|
-| Worker with static assets | Build command blank, deploy command `npx wrangler deploy` (the default). `wrangler.jsonc` at the root tells Wrangler where the files are. |
-| Pages | Framework preset None, build command `exit 0`, build output directory `public` |
-
-Custom domain: `herbie.howells.online`.
+```
+CLOUDFLARE_ACCOUNT_ID=<account id> npx wrangler deploy
+```
 
 ## Editing
 
-Edit the HTML in `public/` and commit. Cloudflare publishes within a minute.
-Update the "Last updated" line and the effective date on the policy pages
-whenever their content changes.
+Edit the HTML in `public/` and commit. Update the "Last updated" line and the
+effective date on the policy pages whenever their content changes.
